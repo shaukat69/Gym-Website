@@ -1,0 +1,1292 @@
+$head_color: #666666;
+$about_color: #DD3333;
+$footer_color: #121212;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+p,
+li {
+    font-size: 21px;
+}
+
+// Navbar
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: $footer_color;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .fa-bars,
+    .fa-xmark {
+        display: none;
+
+    }
+
+    img {
+        width: 50px;
+        height: 45px;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            font-weight: 900;
+            transition: all .8s;
+        }
+
+        a:hover {
+            background-color: $about_color;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+}
+
+// Navbar
+
+// Home
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/home.jpg);
+    color: white;
+
+    h1 {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    h1 span {
+        color: $about_color;
+    }
+
+    p {
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+
+    .btn {
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 15px;
+        color: white;
+        border: 1px solid $about_color;
+        background: none;
+        cursor: pointer;
+        transition: all .8s;
+    }
+
+    .btn:hover {
+        background: $about_color;
+    }
+}
+
+// Home
+
+// About
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: justify;
+
+    p {
+        font-size: 19px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-1 {
+        width: 50%;
+        position: relative;
+        height: 100vh;
+        background-color: $about_color;
+        padding: 40px 0 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after {
+            background-color: $about_color;
+            content: "";
+            display: block;
+            height: 40px;
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: rotate(220deg);
+            width: 40px
+        }
+
+        img {
+            width: 90%;
+        }
+    }
+
+    .col-2 {
+        width: 50%;
+        padding: 90px 40px;
+        height: 100vh;
+        background-color: #F5F5F5;
+
+        a {
+            text-decoration: none;
+            color: $about_color;
+            font-weight: 900;
+        }
+    }
+
+}
+
+// About
+
+// Protein
+.protein {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .row {
+        display: flex;
+    }
+
+    .col-1 {
+        width: 50%;
+        padding-left: 40px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        span {
+            color: $about_color;
+        }
+
+        h1,
+        h2,
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    .col-2 {
+        width: 50%;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+
+        img {
+            width: 90%;
+        }
+    }
+
+    .list-container {
+        display: flex;
+
+        ul {
+            padding: 20px;
+        }
+    }
+
+}
+
+// Protein
+
+// slider
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/slide.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content {
+        padding-right: 14%;
+
+        h2 {
+            color: white;
+            padding-top: 10px;
+            font-size: 30px;
+
+            span {
+                color: $about_color;
+            }
+        }
+
+        button {
+            background-color: $about_color;
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 15px;
+            color: white;
+            border: 1px solid $about_color;
+            cursor: pointer;
+            transition: all .8s;
+            margin: 40px 0 0 20px;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+}
+
+// slider
+
+// Social
+.social {
+    background: #121212;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        padding: 40px;
+        width: 30%;
+
+        h2,
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .col-2 i {
+        background: $about_color;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 50%;
+        border: 1px solid $about_color;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover {
+            background: none;
+        }
+    }
+
+    .col-3 p {
+        text-indent: 14px;
+        text-align: justify;
+    }
+}
+
+// Social
+
+// Footer 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 25px 0;
+
+    p a {
+        text-decoration: none;
+        color: white;
+        transition: all .5s;
+
+        &:hover {
+            color: $about_color;
+        }
+    }
+}
+
+// Footer 
+
+// Contact Page 
+
+.contact-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
+    background: url(/Images/contact.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.contact {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .col-1,
+            .col-2 {
+                width: 50%;
+            }
+
+            .col-1 h3,
+            p {
+                padding-top: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Contact Page 
+
+// Facility Page 
+
+.fitness {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 100px;
+    height: 60vh;
+    font-size: 18px;
+
+    span {
+        color: $about_color;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h1,
+    h2,
+    p {
+        padding-top: 35px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+
+    .row {
+        display: flex;
+        justify-content: center;
+
+        .col-1 h1 {
+            font-size: 35px;
+        }
+
+        .col-1,
+        .col-2 {
+            width: 50%;
+            margin: 0 20px;
+
+            h3 {
+                padding-top: 15px;
+                font-size: 25px;
+                font-weight: lighter;
+            }
+
+            h3 i {
+                font-size: 28px;
+                color: $about_color;
+            }
+        }
+    }
+}
+
+// Facility Page 
+
+// Rate Page 
+.rates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F4F4F4;
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cards {
+            padding: 30px;
+            margin: 15px;
+            background-color: white;
+            height: 60vh;
+            border-radius: 14px;
+            transition: all .5s;
+            text-align: center;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 4px 4px 15px black;
+            }
+
+            h1,
+            h2,
+            p,
+            button {
+                margin-top: 25px;
+            }
+
+            span {
+                color: $about_color;
+                font-size: 40px;
+            }
+        }
+    }
+
+    .btn {
+        padding: 15px 25px;
+        border-radius: 20px;
+        font-size: 15px;
+        border: 1px solid $about_color;
+        background: none;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    .btn:hover {
+        color: white;
+        background: $about_color;
+    }
+}
+
+// Rate Page 
+
+// Gallery Page 
+.gallery {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 15px;
+    justify-content: center;
+    align-content: center;
+    row-gap: 15px;
+    height: 100%;
+    place-self: center;
+
+    .card {
+        border-radius: 14px;
+        width: 100% !important;
+
+        img {
+            border-radius: 14px;
+            width: 100%;
+            height: 250px;
+        }
+    }
+}
+
+// Gallery Page 
+
+// Media Query 
+
+
+// Max-width 768px 
+@media only screen and (min-width: 768px) and (max-width:900px){
+
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 30px;
+        position: sticky;
+
+        ul {
+            display: flex;
+
+            li {
+                font-size: 16px;
+            }
+        }
+
+        .fa-bars {
+            display: none;
+        }
+    }
+
+    .home {
+        background-position: center;
+        background-size: cover;
+
+        h1 {
+            font-size: 34px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 12px;
+        }
+    }
+
+    .about {
+        display: flex;
+
+        .row {
+            display: flex;
+
+            .col-1 {
+                display: flex;
+            }
+
+            .col-2 {
+                margin: 0;
+                padding: 40px;
+
+                background: none;
+
+                h2,
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .protein {
+        display: flex;
+
+        .row {
+            h1 {
+                font-size: 22px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+
+        .col-1{
+            width: 70%;
+
+            h2{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .list-container {
+
+        ul li{
+            font-size: 18px;
+        }
+    }
+    
+    .social {
+        display: block;
+        height: 90vh;
+        padding: 10px 20px;
+
+
+        .row {
+            display: block;
+            text-align: center;
+        }
+
+        .col-1,.col-3{
+            h2{
+                font-size: 22px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+
+        .col-1,
+        .col-2,
+        .col-3 {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .col-3 p{
+            text-align: justify;
+        }
+
+    }
+
+    .footer {
+        padding: 23px;
+        text-align: center;
+        p{
+            font-size: 14px; 
+        }
+    }
+
+    // Facility Page 
+    .fitness {
+        display: flex;
+        padding: 0 45px;
+
+        h1{
+            font-size: 22px;
+        }
+
+        h2{
+            font-size: 20px;
+        }
+    }
+
+    .container {
+        padding: 0 20px;
+
+        .row {
+            display: flex;
+            margin-top: 50px;
+
+            .col-1{
+                margin: 0 20px 0 20px;
+            }
+
+            .col-2{
+                margin: 0 20px 0 0;
+            }
+
+            .col-1,
+            .col-2 {
+                width: 50%;
+
+                h1 {
+                    font-size: 22px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    // Facility Page 
+
+       // Gallery Page 
+
+       .gallery {
+
+        .card {
+            width: 300px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // Gallery Page 
+
+
+    // Rates Page 
+
+    .rates {
+        height: 100%;
+
+        .row {
+            display: block;
+            margin-top: 5%;
+            padding-bottom: 5%;
+
+            .cards {
+                height: 72vh;
+            }
+        }
+    }
+
+
+    // Rates Page 
+
+
+
+    // Contact Page 
+
+    .contact-head {
+        font-size: 15px;
+        height: 30vh;
+    }
+
+    .contact {
+        margin-bottom: 36%;
+
+        .container {
+            .row {
+                display: block;
+                text-align: center;
+                padding: 0 20px;
+                margin-top: 32%;
+
+                .col-1,
+                .col-2 {
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .col-1 {
+                    margin-bottom: 20px;
+                }
+
+                .col-2 {
+                    iframe {
+                        width: 400px;
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Contact Page 
+}
+
+// Max-width 600px 
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 30px;
+        position: sticky;
+
+        ul {
+            display: none;
+            margin-top: 50px;
+            position: absolute;
+            top: 121px;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            background: black;
+            width: 100%;
+
+            a,
+            li {
+                width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        .fa-bars {
+            display: flex;
+        }
+    }
+
+    .home {
+        background-position: center;
+        background-size: cover;
+
+        h1 {
+            font-size: 34px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 12px;
+        }
+    }
+
+    .about {
+            flex-direction: column;
+
+        .row {
+            flex-direction: column;
+
+            .col-1 {
+                display: none;
+            }
+
+            .col-2 {
+                margin-top: -25%;
+                padding-top: 0;
+                width: 100%;
+                height: 50vh;
+                background: none;
+            }
+        }
+    }
+
+    .protein {
+            height: 100vh;
+
+        .row {
+            h1 {
+                font-size: 28px;
+            }
+
+            .col-2 {
+                display: none;
+            }
+
+            .col-1 {
+                margin: 25% 0;
+                width: 100%;
+                height: 50vh;
+            }
+        }
+    }
+
+    .slider {
+        background-position: center;
+
+        .content {
+            text-align: center;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            button {
+                margin-top: 15px;
+            }
+        }
+    }
+
+
+    .social {
+        height: 105vh;
+        padding: 10px 20px;
+
+
+        .row {
+                        flex-direction: column;
+            text-align: center;
+        }
+
+        .col-1,
+        .col-2,
+        .col-3 {
+            width: 100%;
+            padding: 20px;
+        }
+
+    }
+
+    .footer {
+        padding: 23px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    // Facility Page 
+    .fitness {
+        padding: 0 45px;
+        margin-top: 40px;
+    }
+
+    .container {
+        margin-bottom: 10%;
+
+        .row {
+                                flex-direction: column;
+            margin-top: 62%;
+
+            .col-2 h3 {
+                padding: 0 0 15px 0;
+            }
+
+            .col-1,
+            .col-2 {
+                width: 100%;
+
+                h1 {
+                    font-size: 25px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .facility_protein {
+        margin: 42% 0 0 0;
+    }
+
+    // Facility Page 
+
+
+    // Rates Page 
+
+    .rates {
+        height: 100%;
+
+        .row {
+            flex-direction: column;
+            margin-top: 5%;
+            padding-bottom: 5%;
+
+            .cards {
+                height: 72vh;
+            }
+        }
+    }
+
+
+    // Rates Page 
+
+    // Gallery Page 
+
+    .gallery {
+        padding: 15px;
+        text-align: center;
+
+        .card {
+            width: 99%;
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+
+    // Gallery Page 
+
+    // Contact Page 
+    .contact-head {
+        font-size: 15px;
+        height: 30vh;
+    }
+    .contact {
+        margin-bottom: 36%;
+
+        .container {
+            .row {
+                display: block;
+                text-align: center;
+                padding: 0 20px;
+                margin-top: 32%;
+
+                .col-1,
+                .col-2 {
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .col-1 {
+                    margin-bottom: 20px;
+                }
+
+                .col-2 {
+                    iframe {
+                        width: 400px;
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Contact Page 
+}
+
+
+// Max-width 400px 
+@media only screen and (max-width: 400px) {
+    .navbar{
+        justify-content: space-between;
+        padding: 10px 30px;
+        position: sticky;
+
+        ul {
+            display: none;
+            margin-top: 50px;
+            position: absolute;
+            top: 121px;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            background: black;
+            width: 100%;
+
+            a,
+            li {
+                width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        .fa-bars {
+            display: flex;
+        }
+    }
+
+
+    .home {
+        background-position: center;
+        background-size: cover;
+
+        h1 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .btn {
+            padding: 12px;
+            font-size: 10px;
+        }
+    }
+
+    .about {
+        display: block;
+
+        .row {
+            display: block;
+
+            .col-1 {
+                display: none;
+            }
+
+            .col-2 {
+                margin-top: -60px;
+                width: 100%;
+                height: 50vh;
+                background: none;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .protein {
+        display: block;
+        height: 100vh;
+
+        .list-container {
+            margin-bottom: 5%;
+        }
+
+        .row {
+            padding: 0 20px 0 0;
+            h1 {
+                font-size: 22px;
+            }
+
+            .col-2 {
+                display: none;
+            }
+
+            .col-1 {
+                margin: 50% 0;
+                width: 100%;
+
+                p,
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .slider {
+        background-position: center;
+
+        .content {
+            text-align: center;
+
+            h2 {
+                font-size: 20px;
+            }
+
+            button {
+                margin-top: 15px;
+                font-size: 11px;
+            }
+        }
+    }
+
+
+    .social {
+        display: block;
+        height: 82vh;
+        padding: 10px 20px;
+
+
+        .row {
+            display: block;
+            text-align: center;
+        }
+
+        .col-1,
+        .col-2,
+        .col-3 {
+            width: 100%;
+            padding: 20px;
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .footer {
+        padding: 18px;
+        text-align: center;
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    // Facility Page 
+    .fitness {
+        display: block;
+        padding: 0 45px;
+
+        h1,
+        h2 {
+            padding-top: 15px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .container {
+        margin-bottom: 10%;
+
+        .row {
+            display: block;
+            margin-top: 70%;
+
+            .col-2 h3 {
+                padding: 0 0 15px 0;
+            }
+
+            .col-1,
+            .col-2 {
+                width: 97%;
+
+                h1 {
+                    font-size: 18px;
+                }
+
+                h3 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .facility_protein {
+        margin: 33% 0 0 0;
+    }
+
+    // Facility Page 
+
+    // Gallery Page 
+
+    .gallery {
+        padding: 15px;
+        text-align: center;
+
+        .card {
+            width: 99%;
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+
+    // Gallery Page 
+
+    // Contact Page
+    .contact-head {
+        font-size: 15px;
+        height: 30vh;
+    }
+
+    .contact {
+        margin-bottom: 36%;
+
+        .container {
+            .row {
+                .col-1 {
+
+                    h3,
+                    p {
+                        padding-top: 8px;
+                    }
+                }
+
+                .col-2 {
+                    iframe {
+                        width: 320px;
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Contact Page 
+}
+
+
+
+// Media Query 
